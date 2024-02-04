@@ -30,7 +30,8 @@ public class Assignment1 extends BaseRepository {
 	@AfterTest
 	public void tearDown()
 	{
-		driver.close();
+		//driver.close();
+		driver.quit();
 	}
 	
 	

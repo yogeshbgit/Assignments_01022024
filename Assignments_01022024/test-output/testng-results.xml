@@ -2,52 +2,52 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-04T21:08:25 IST" name="Suite" finished-at="2024-02-04T21:09:03 IST" duration-ms="38294">
+  <suite started-at="2024-02-04T21:30:07 IST" name="Suite" finished-at="2024-02-04T21:30:41 IST" duration-ms="33869">
     <groups>
     </groups>
-    <test started-at="2024-02-04T21:08:25 IST" name="Assignment1" finished-at="2024-02-04T21:08:35 IST" duration-ms="9771">
+    <test started-at="2024-02-04T21:30:07 IST" name="Assignment1" finished-at="2024-02-04T21:30:25 IST" duration-ms="17728">
       <class name="Assignment1.Assignment1">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment1.Assignment1@192d43ce]" started-at="2024-02-04T21:08:25 IST" name="setup" finished-at="2024-02-04T21:08:33 IST" duration-ms="8285" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment1.Assignment1@192d43ce]" started-at="2024-02-04T21:30:07 IST" name="setup" finished-at="2024-02-04T21:30:22 IST" duration-ms="14705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateTitle()[pri:0, instance:Assignment1.Assignment1@192d43ce]" started-at="2024-02-04T21:08:33 IST" name="validateTitle" finished-at="2024-02-04T21:08:34 IST" duration-ms="645" status="PASS">
+        <test-method signature="validateTitle()[pri:0, instance:Assignment1.Assignment1@192d43ce]" started-at="2024-02-04T21:30:22 IST" name="validateTitle" finished-at="2024-02-04T21:30:24 IST" duration-ms="1760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment1.Assignment1@192d43ce]" started-at="2024-02-04T21:08:34 IST" name="tearDown" finished-at="2024-02-04T21:08:35 IST" duration-ms="733" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment1.Assignment1@192d43ce]" started-at="2024-02-04T21:30:24 IST" name="tearDown" finished-at="2024-02-04T21:30:25 IST" duration-ms="1081" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Assignment1.Assignment1 -->
     </test> <!-- Assignment1 -->
-    <test started-at="2024-02-04T21:08:35 IST" name="Assignment2" finished-at="2024-02-04T21:08:43 IST" duration-ms="7626">
+    <test started-at="2024-02-04T21:30:25 IST" name="Assignment2" finished-at="2024-02-04T21:30:31 IST" duration-ms="6306">
       <class name="Assignment2.Assignment2">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment2.Assignment2@52bf72b5]" started-at="2024-02-04T21:08:35 IST" name="setup" finished-at="2024-02-04T21:08:41 IST" duration-ms="5664" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment2.Assignment2@52bf72b5]" started-at="2024-02-04T21:30:25 IST" name="setup" finished-at="2024-02-04T21:30:31 IST" duration-ms="5693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateURL()[pri:0, instance:Assignment2.Assignment2@52bf72b5]" started-at="2024-02-04T21:08:41 IST" name="validateURL" finished-at="2024-02-04T21:08:41 IST" duration-ms="819" status="PASS">
+        <test-method signature="validateURL()[pri:0, instance:Assignment2.Assignment2@52bf72b5]" started-at="2024-02-04T21:30:31 IST" name="validateURL" finished-at="2024-02-04T21:30:31 IST" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateURL -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment2.Assignment2@52bf72b5]" started-at="2024-02-04T21:08:41 IST" name="tearDown" finished-at="2024-02-04T21:08:43 IST" duration-ms="1137" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment2.Assignment2@52bf72b5]" started-at="2024-02-04T21:30:31 IST" name="tearDown" finished-at="2024-02-04T21:30:31 IST" duration-ms="439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Assignment2.Assignment2 -->
     </test> <!-- Assignment2 -->
-    <test started-at="2024-02-04T21:08:43 IST" name="Assignment3" finished-at="2024-02-04T21:09:03 IST" duration-ms="20838">
+    <test started-at="2024-02-04T21:30:31 IST" name="Assignment3" finished-at="2024-02-04T21:30:41 IST" duration-ms="9788">
       <class name="Assignment3.Assignment3">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment3.Assignment3@222545dc]" started-at="2024-02-04T21:08:43 IST" name="setup" finished-at="2024-02-04T21:08:57 IST" duration-ms="14213" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment3.Assignment3@222545dc]" started-at="2024-02-04T21:30:31 IST" name="setup" finished-at="2024-02-04T21:30:37 IST" duration-ms="5682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateLogin()[pri:0, instance:Assignment3.Assignment3@222545dc]" started-at="2024-02-04T21:08:57 IST" name="validateLogin" finished-at="2024-02-04T21:09:03 IST" duration-ms="6341" status="PASS">
+        <test-method signature="validateLogin()[pri:0, instance:Assignment3.Assignment3@222545dc]" started-at="2024-02-04T21:30:37 IST" name="validateLogin" finished-at="2024-02-04T21:30:40 IST" duration-ms="3286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment3.Assignment3@222545dc]" started-at="2024-02-04T21:09:03 IST" name="tearDown" finished-at="2024-02-04T21:09:03 IST" duration-ms="276" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment3.Assignment3@222545dc]" started-at="2024-02-04T21:30:40 IST" name="tearDown" finished-at="2024-02-04T21:30:41 IST" duration-ms="812" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

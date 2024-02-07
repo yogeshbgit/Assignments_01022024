@@ -2,13 +2,17 @@ package PageObjects;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class HomePageObject {
 
@@ -58,8 +62,22 @@ public class HomePageObject {
 			hm.put(titles.get(i).getText(), ind);
 			//System.out.println("title:"+titles.get(i).getText()+", index:"+ind);
 		}
-		int index=hm.get(title);
-		//System.out.println("index:"+index);
+		int index = 0;
+		boolean isAvailable = false;
+		for(Map.Entry entry:hm.entrySet())
+		{
+			if(entry.getKey().equals(title))
+			{
+				 index=hm.get(title);
+				 isAvailable=true;
+				//System.out.println("key:"+entry.getKey()+" title:"+title);
+			}
+			
+		}
+		//System.out.println("flag:"+flag);
+		Assert.assertTrue(isAvailable,"Title Not Matched");
+		System.out.println("index:"+index);
 		return index;
+		
 	}
 }

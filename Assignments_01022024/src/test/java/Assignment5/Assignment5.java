@@ -1,4 +1,4 @@
-package Assignment4;
+package Assignment5;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.testng.annotations.*;
 import PageObjects.HomePageObject;
 import Resources.BaseRepository;
 
-public class Assignment4  extends BaseRepository {
+public class Assignment5  extends BaseRepository {
 	
 public WebDriver driver;
 	

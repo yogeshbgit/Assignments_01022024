@@ -26,4 +26,9 @@
       <class name="Assignment6.Assignment6"/> 
     </classes>
   </test> <!-- Test -->
+   <test thread-count="5" name="Assignment7">
+    <classes>
+      <class name="Assignment7.Assignment7"/> 
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->

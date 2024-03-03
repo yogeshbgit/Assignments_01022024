@@ -13,12 +13,14 @@ import Resources.BaseRepository;
 public class Assignment5  extends BaseRepository {
 	
 public WebDriver driver;
-	
+Properties pro;
 	@BeforeTest
 	public void setup() throws IOException
 	{
 
-		driver = makyMytripInitialize();
+		 pro = getProperties();
+		 driver = initialize(pro.getProperty("makeMyTripUrl"));
+		//driver = makyMytripInitialize();
 	}
 	
 	@Test

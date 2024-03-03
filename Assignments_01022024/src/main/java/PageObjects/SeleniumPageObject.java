@@ -82,6 +82,7 @@ public WebDriver driver;
 		{
 			System.out.println("return type:"+type.getText());
 		}
+		 
 	}
 	
 }

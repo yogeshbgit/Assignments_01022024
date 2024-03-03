@@ -1,6 +1,7 @@
 package Assignment3;
 
 import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -14,11 +15,14 @@ public class Assignment3 extends BaseRepository{
 	
 	public WebDriver driver;
 	loginPageObject lpo;
+	Properties pro;
 	
 	@BeforeTest
 	public void setup() throws IOException
 	{
-		driver= openSourceInitialize();
+		 pro = getProperties();
+		 driver = initialize(pro.getProperty("openSourceUrl"));
+		//driver= openSourceInitialize();
 	}
 	
 	@Test

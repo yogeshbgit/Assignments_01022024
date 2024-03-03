@@ -14,12 +14,14 @@ import Resources.BaseRepository;
 
 public class Assignment6 extends BaseRepository{
 public WebDriver driver;
-	
+Properties pro;
 	@BeforeTest
 	public void setup() throws IOException
 	{
 
-		driver = seleniumInitialize();
+		 pro = getProperties();
+		 driver = initialize(pro.getProperty("seleniumURL"));
+		//driver = seleniumInitialize();
 	}
 	
 	@Test

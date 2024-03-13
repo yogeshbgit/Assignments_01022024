@@ -1,45 +1,43 @@
 package Assignment3;
 
 import java.io.IOException;
-
+import java.time.Duration;
+import java.util.Properties;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import PageObjects.HomePageObject;
-import PageObjects.loginPageObject;
-import Resources.BaseRepository;
+import PageObjects.LoginPageObject;
+import base.BaseClass;
 
-public class Assignment3 extends BaseRepository{
-	
+public class Assignment3 extends BaseClass {
+
 	public WebDriver driver;
-	loginPageObject lpo;
-	
-	@BeforeTest
-	public void setup() throws IOException
-	{
-		driver= openSourceInitialize();
-	}
-	
-	@Test
-	public void validateLogin() throws InterruptedException
-	{
+	LoginPageObject lpo;
+	Properties pro;
 
-		lpo = new loginPageObject(driver);
+	@BeforeMethod
+	public void setup() throws IOException {
+		pro = getProperties();
+		driver = initialize(pro.getProperty("openSource.Url"));
+	}
+
+	@Test
+	public void validateLogin() throws InterruptedException {
+		lpo = new LoginPageObject(driver);
 		lpo.enterUserName();
 		lpo.enterPassword();
 		lpo.clickOnLogin();
-		Thread.sleep(2000);
-		HomePageObject hpo = new HomePageObject(driver);
-		Assert.assertTrue(hpo.getuserName());
+		HomePageObject homePage = new HomePageObject(driver);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(homePage.username));
+		Assert.assertTrue(homePage.getuserName());
 	}
-	
-	@AfterTest
-	public void tearDown()
-	{
-		//driver.close();
+
+	@AfterMethod
+	public void tearDown() {
 		driver.quit();
 	}
-	
-
 }

@@ -1,40 +1,32 @@
-package Assignment1;
+ package Assignment1;
 
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import base.BaseClass;
 
-import Resources.BaseRepository;
+public class Assignment1 extends BaseClass {
 
-public class Assignment1 extends BaseRepository {
-	
 	public WebDriver driver;
-	
-	@BeforeTest
-	public void setup() throws IOException
-	{
+	Properties pro;
 
-		driver = makyMytripInitialize();
+	@BeforeMethod
+	public void setup() throws IOException {
+		pro = getProperties();
+		driver = initialize(pro.getProperty("makeMyTrip.Url"));
 	}
 
 	@Test()
-	public void  validateTitle()
-	{
+	public void validateTitle() {
 		String expectedTitle = "MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday";
-		String actualTitle= driver.getTitle();
+		String actualTitle = driver.getTitle();
 		Assert.assertEquals(expectedTitle, actualTitle);
 	}
-	@AfterTest
-	public void tearDown()
-	{
-		//driver.close();
+
+	@AfterMethod
+	public void tearDown() {
 		driver.quit();
 	}
-	
-	
-	
-		
 }

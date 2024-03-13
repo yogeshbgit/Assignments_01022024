@@ -4,31 +4,13 @@
   <test thread-count="5" name="Assignment1">
     <classes>
       <class name="Assignment1.Assignment1"/>
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="Assignment2">
-    <classes>
       <class name="Assignment2.Assignment2"/>
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="Assignment3">
-    <classes>
       <class name="Assignment3.Assignment3"/> 
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="Assignment5">
-    <classes>
       <class name="Assignment5.Assignment5"/> 
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="Assignment6">
-    <classes>
-      <class name="Assignment6.Assignment6"/> 
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="Assignment7">
-    <classes>
+      <class name="Assignment6.Assignment6"/>
       <class name="Assignment7.Assignment7"/> 
+      <class name="Assignment8.Assignment8"/> 
+       <class name="Assignment9.Assignment9"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

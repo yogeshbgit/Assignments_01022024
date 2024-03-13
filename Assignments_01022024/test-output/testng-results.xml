@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-03T21:04:50 IST" name="Default suite" finished-at="2024-03-03T21:05:22 IST" duration-ms="32212">
+  <suite started-at="2024-03-13T20:28:05 IST" name="Default suite" finished-at="2024-03-13T20:28:32 IST" duration-ms="27293">
     <groups>
     </groups>
-    <test started-at="2024-03-03T21:04:50 IST" name="Default test" finished-at="2024-03-03T21:05:22 IST" duration-ms="32212">
-      <class name="Assignment8.Assignment8">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:Assignment8.Assignment8@5f058f00]" started-at="2024-03-03T21:04:50 IST" name="initialize" finished-at="2024-03-03T21:05:08 IST" duration-ms="18448" status="PASS">
+    <test started-at="2024-03-13T20:28:05 IST" name="Default test" finished-at="2024-03-13T20:28:32 IST" duration-ms="27293">
+      <class name="Assignment9.Assignment9">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Assignment9.Assignment9@31368b99]" started-at="2024-03-13T20:28:05 IST" name="setup" finished-at="2024-03-13T20:28:15 IST" duration-ms="9524" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="validateRunningTrains()[pri:0, instance:Assignment8.Assignment8@5f058f00]" started-at="2024-03-03T21:05:09 IST" name="validateRunningTrains" finished-at="2024-03-03T21:05:21 IST" duration-ms="11998" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="validateSearchProduct()[pri:0, instance:Assignment9.Assignment9@31368b99]" started-at="2024-03-13T20:28:15 IST" name="validateSearchProduct" finished-at="2024-03-13T20:28:31 IST" duration-ms="16955" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRunningTrains -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment8.Assignment8@5f058f00]" started-at="2024-03-03T21:05:21 IST" name="tearDown" finished-at="2024-03-03T21:05:22 IST" duration-ms="1545" status="PASS">
+        </test-method> <!-- validateSearchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assignment9.Assignment9@31368b99]" started-at="2024-03-13T20:28:32 IST" name="tearDown" finished-at="2024-03-13T20:28:32 IST" duration-ms="735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Assignment8.Assignment8 -->
+      </class> <!-- Assignment9.Assignment9 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

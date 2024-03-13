@@ -2,57 +2,47 @@ package Assignment7;
 
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import PageObjects.DemoQaPageObject;
+import base.BaseClass;
 
-import PageObjects.demoqaPageObject;
-import Resources.BaseRepository;
+public class Assignment7 extends BaseClass {
 
-public class Assignment7 extends BaseRepository {
-	
 	public WebDriver driver;
 	Properties pro;
-	demoqaPageObject demopo ;
-	
-	@BeforeTest
-	public void setup() throws IOException
-	{
-		 pro = getProperties();
-		 driver = initialize(pro.getProperty("demoqaUrl"));
-		//driver = demoqaInitialize();
-	}
-	
-	
-	@Test(priority=1)
-	public void validateLogin() throws InterruptedException
-	{
-		String cardName = pro.getProperty("cardName");
-		 demopo =  new demoqaPageObject(driver);
-		demopo.clickOnCard(cardName);
-		demopo.clickOnLogin();
-		String userName= pro.getProperty("userName");
-		String password = pro.getProperty("password");
-		demopo.enterUserNameAndPassword(userName, password);
-		demopo.clickOnLoginButton();
-	}
-		
-	
-	
-	@Test(priority=2)
-	public void  validateBookAdded() throws IOException, InterruptedException
-	{
-		demopo.clickOnBookStore();
-		String bookName = pro.getProperty("bookName");
-		demopo.clickOnBook(bookName);
-	}
-	
-	@AfterTest
-	public void tearDown()
-	{
-		driver.close();
-	}
-	
-	
+	DemoQaPageObject demoQaPage;
+	String cardName;
 
+	@BeforeMethod
+	public void setup() throws IOException {
+		pro = getProperties();
+		driver = initialize(pro.getProperty("demo.qa.Url"));
+	}
+
+	@Test
+	public void validateBookAdded() throws IOException, InterruptedException {
+		cardName = pro.getProperty("card.Name");
+		demoQaPage = new DemoQaPageObject(driver);
+		demoQaPage.clickOnCard(cardName);
+		demoQaPage.clickOnBookStore();
+		String bookName = pro.getProperty("book.Name");
+		demoQaPage.clickOnBook(bookName);
+	}
+	
+	@Test
+	public void validateLogin() throws InterruptedException {
+		demoQaPage = new DemoQaPageObject(driver);
+		demoQaPage.clickOnCard(cardName);
+		demoQaPage.clickOnLogin();
+		String userName = pro.getProperty("user.Name");
+		String password = pro.getProperty("password");
+		demoQaPage.enterUserNameAndPassword(userName, password);
+		demoQaPage.clickOnLoginButton();
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
 }

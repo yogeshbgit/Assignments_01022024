@@ -1,49 +1,39 @@
 package Assignment6;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import PageObjects.SeleniumPageObject;
-import Resources.BaseRepository;
+import base.BaseClass;
 
-public class Assignment6 extends BaseRepository{
-public WebDriver driver;
-Properties pro;
-	@BeforeTest
-	public void setup() throws IOException
-	{
+public class Assignment6 extends BaseClass {
+	public WebDriver driver;
+	Properties pro;
 
-		 pro = getProperties();
-		 driver = initialize(pro.getProperty("seleniumURL"));
-		//driver = seleniumInitialize();
+	@BeforeMethod
+	public void setup() throws IOException {
+		pro = getProperties();
+		driver = initialize(pro.getProperty("selenium.Url"));
 	}
-	
+
 	@Test
-	public void getMethodandReturnType()
-	{
+	public void getMethodandReturnType() {
 		Properties pro = new Properties();
-		pro=prop;
+		pro = prop;
 		String link = pro.getProperty("packageLink");
-		SeleniumPageObject spo = new SeleniumPageObject(driver);
-		boolean linkClicked = spo.clickOnPackageLink(link);
-		Assert.assertTrue(linkClicked,"Package link not matched");
-		spo.clickOnInterfaces();
-		spo.clickOnWebDriverInterface();
-		spo.getAllMethods();
-		spo.getAllReturnType();
-		
+		SeleniumPageObject seleniumPage = new SeleniumPageObject(driver);
+		boolean linkClicked = seleniumPage.clickOnPackageLink(link);
+		Assert.assertTrue(linkClicked, "Package link not matched");
+		seleniumPage.clickOnInterfaces();
+		seleniumPage.clickOnWebDriverInterface();
+		seleniumPage.getAllMethods();
+		seleniumPage.getAllReturnType();
 	}
-	
-	@AfterTest
-	public void tearDown()
-	{
+
+	@AfterMethod
+	public void tearDown() {
 		driver.quit();
 	}
-
 }
